@@ -117,9 +117,10 @@ export default function Home({ navigation, route }) {
 
           <View style={{
             backgroundColor: colors.white,
-            borderRadius: 25,
+            borderRadius: 5,
+            paddingHorizontal: 5,
           }}>
-            <Image source={require('../../assets/logo.png')} style={{
+            <Image source={require('../../assets/newlogo.png')} style={{
               width: 50,
               height: 50,
               resizeMode: 'contain'
@@ -162,7 +163,7 @@ export default function Home({ navigation, route }) {
           {/* 2 */}
           <MyButtonKu label="Royalti" img={require('../../assets/royalti.png')} onPress={() => navigation.navigate('Royalti', user)} />
           <MyButtonKu label="Tarik Saldo" img={require('../../assets/tariksaldo.png')} onPress={() => navigation.navigate('TarikSaldo', user)} />
-          <MyButtonKu label="Tentang Kami" img={require('../../assets/logo.png')} onPress={() => navigation.navigate('TentangKami', user)} />
+          <MyButtonKu label="Tentang Kami" img={require('../../assets/newlogo.png')} onPress={() => navigation.navigate('TentangKami', user)} />
         </View>
 
 

@@ -49,13 +49,11 @@ export default function Splash({ navigation }) {
       <View style={styles.innerContainer}>
         <ImageBackground source={require('../../assets/bgone.png')} style={styles.background}>
           <Animated.Image
-            source={require('../../assets/logo.png')}
+            source={require('../../assets/newlogo.png')}
             resizeMode="contain"
             style={[styles.logo, { transform: [{ scale: scaleAnim }] }]} // Gunakan transform scale
           />
-          <Animated.Text style={[styles.text, { opacity: textOpacity }]}>
-            UmrohGo
-          </Animated.Text>
+
           <ActivityIndicator color={colors.secondary} size="large" />
         </ImageBackground>
       </View>
@@ -85,7 +83,7 @@ const styles = StyleSheet.create({
   logo: {
     width: windowWidth / 3, // Awalnya kecil, lalu diperbesar dengan animasi scale
     height: windowWidth / 3,
-    marginBottom: 10,
+    marginBottom: 50,
   },
   text: {
     fontFamily: fonts.secondary[600],

@@ -76,7 +76,12 @@ export default function Register({ navigation }) {
         axios.post(apiURL + 'register', data).then(res => {
             console.log(res.data)
             setLoading(false);
-            Alert.alert(MYAPP, res.data.message, [{ text: 'OK', onPress: () => navigation.navigate('Login') }]);
+            if (res.data.status == 200) {
+                Alert.alert(MYAPP, res.data.message, [{ text: 'OK', onPress: () => navigation.navigate('Login') }]);
+            } else {
+                showMessage({ message: res.data.message, type: 'danger' });
+            }
+
         }).catch((error) => {
             setLoading(false);
             console.log(error.data)

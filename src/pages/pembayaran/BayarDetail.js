@@ -225,13 +225,19 @@ export default function BayarDetail({ navigation, route }) {
                         </Text>
                     </View>
                     <MyGap jarak={10} />
-                    <MyButton warna={colors.primary} title="Update Pembayaran" onPress={() => navigation.navigate('BayarAdd', item)} />
-                    <MyGap jarak={10} />
-                    <MyButton warna={colors.danger} Icons="print-outline" title="Print Invoice" onPress={() => {
-                        console.log(item);
 
-                        Linking.openURL(webURL + `/paket/print/${item.id_paket}/${item.id_jamaah}`)
-                    }} />
+                    <MyButton warna={colors.primary} title="Update Pembayaran" onPress={() => navigation.navigate('BayarAdd', item)} />
+
+                    <MyGap jarak={10} />
+
+                    {(item.total - item.bayar) == 0 &&
+
+                        <MyButton warna={colors.danger} Icons="print-outline" title="Print Invoice" onPress={() => {
+                            console.log(item);
+
+                            Linking.openURL(webURL + `/paket/print/${item.id_paket}/${item.id_jamaah}`)
+                        }} />
+                    }
 
 
                 </View>

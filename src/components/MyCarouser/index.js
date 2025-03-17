@@ -38,7 +38,7 @@ export default function MyCarouser() {
       <View style={styles.cardContainer}>
         <FastImage source={{ uri: item.image }} style={styles.cardImage} />
         <View style={styles.overlay}>
-          <Image source={require('../../assets/nikmatour.png')} style={styles.logo} />
+          <Image source={require('../../assets/newline.png')} style={styles.logo} />
         </View>
       </View>
     </TouchableWithoutFeedback>
@@ -92,8 +92,8 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
   },
   logo: {
-    width: 100,
-    height: 40,
+    width: 150,
+    height: 50,
     resizeMode: 'contain',
   },
   loader: {

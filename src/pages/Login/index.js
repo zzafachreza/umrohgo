@@ -90,7 +90,7 @@ export default function Login({ navigation }) {
           keyboardDismissMode="on-drag"
           nestedScrollEnabled
         >
-          <FastImage source={require('../../assets/logo.png')} style={styles.logo} />
+          <FastImage source={require('../../assets/newlogo.png')} style={styles.logo} />
 
           <MyGap jarak={30} />
 
